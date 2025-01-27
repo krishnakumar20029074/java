@@ -1,0 +1,156 @@
+
+
+
+class Book {
+    String title;
+    String author;
+    double price;
+
+    public Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
+    public void displayDetails() {
+        System.out.println("Title: " + title + ", Author: " + author + ", Price: $" + price);
+    }
+}
+
+
+abstract class Shape {
+    abstract double calculateArea();
+}
+
+class Circle extends Shape {
+    double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+
+class Car {
+    String brand;
+    int speed;
+
+    public Car(String brand, int speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+
+    public void accelerate() {
+        speed += 10;
+        System.out.println("Accelerated. New speed: " + speed);
+    }
+}
+
+
+abstract class Employee {
+    String name;
+    int id;
+
+    public Employee(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    abstract void work();
+}
+
+class Developer extends Employee {
+    public Developer(String name, int id) {
+        super(name, id);
+    }
+
+    @Override
+    void work() {
+        System.out.println(name + " is coding.");
+    }
+}
+
+
+class Person {
+    String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public void greet() {
+        System.out.println("Hello, " + name);
+    }
+}
+
+
+abstract class Animal {
+    abstract void sound();
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
+
+class Laptop {
+    String model;
+    double price;
+
+    public Laptop(String model, double price) {
+        this.model = model;
+        this.price = price;
+    }
+
+    public void showSpecs() {
+        System.out.println("Model: " + model + ", Price: $" + price);
+    }
+}
+
+
+abstract class Vehicle {
+    abstract void drive();
+}
+
+class Bike extends Vehicle {
+    @Override
+    void drive() {
+        System.out.println("Riding the bike.");
+    }
+}
+
+
+class Smartphone {
+    String brand;
+    String model;
+
+    public Smartphone(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public void showDetails() {
+        System.out.println("Brand: " + brand + ", Model: " + model);
+    }
+}
+
+
+abstract class Furniture {
+    abstract void build();
+}
+
+class Chair extends Furniture {
+    @Override
+    void build() {
+        System.out.println("Building a chair.");
+    }
+}
+
