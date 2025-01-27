@@ -1,0 +1,149 @@
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void eat() {
+        System.out.println("The cat eats fish.");
+    }
+}
+
+
+class Printer {
+    void print() {
+        System.out.println("Printing a document.");
+    }
+}
+
+class ColorPrinter extends Printer {
+    @Override
+    void print() {
+        System.out.println("Printing a color document.");
+    }
+}
+
+
+class Student {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Invalid age.");
+        }
+    }
+}
+
+interface Flyable {
+    void fly();
+}
+
+class Plane implements Flyable {
+    @Override
+    public void fly() {
+        System.out.println("The plane is flying.");
+    }
+}
+
+
+class Parent {
+    public Parent() {
+        System.out.println("Parent constructor called.");
+    }
+}
+
+class Child extends Parent {
+    public Child() {
+        super();
+        System.out.println("Child constructor called.");
+    }
+}
+
+
+interface Drawable {
+    void draw();
+}
+
+class Rectangle implements Drawable {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a rectangle.");
+    }
+}
+
+
+abstract class Appliance {
+    abstract void operate();
+}
+
+class WashingMachine extends Appliance {
+    @Override
+    void operate() {
+        System.out.println("Washing clothes.");
+    }
+}
+
+
+class Account {
+    private double balance;
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        } else {
+            System.out.println("Deposit amount must be positive.");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Invalid withdrawal amount.");
+        }
+    }
+}
+
+
+interface AnimalBehavior {
+    void sound();
+}
+
+class Lion implements AnimalBehavior {
+    @Override
+    public void sound() {
+        System.out.println("Roar");
+    }
+}
